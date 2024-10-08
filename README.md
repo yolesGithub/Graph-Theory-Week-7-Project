@@ -1,4 +1,4 @@
-### Graph Theory Week 7 Assignment
+# Graph Theory Week 7 Assignment
 
 | Name  | NRP |
 | ------------- | ------------- |
@@ -6,7 +6,7 @@
 | Haidar Daffa Firzatullah  | 5025231071  |
 
 ## Traveling Salesman Problem
-# Problem Description
+### Problem Description
 
 The Travelling Salesman Problem (TSP) is a combinatorial optimization problem. Given a set of cities and the distances between each pair of cities, the task is to find the shortest possible tour that visits each city exactly once and returns to the starting city.
 
