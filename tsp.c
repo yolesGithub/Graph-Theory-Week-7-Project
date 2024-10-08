@@ -8,13 +8,11 @@ int graph[MAX][MAX], visited[MAX], bestRoute[MAX], currentRoute[MAX];
 int min = INF; 
 
 void tsp(int pos, int visitedCount, int cost, int start) {
-    
     if (visitedCount == n && graph[pos][start]) {
         cost += graph[pos][start]; // Add cost to return to start
 
         if (cost < min) { // Update minimum cost
             min = cost;
-
             for (int i = 0; i < n; i++) {
                 bestRoute[i] = currentRoute[i];
             }
@@ -46,11 +44,11 @@ void findTSP(int start) {
     printf("Route: ");
     for (int i = 0; i < n; i++) {
         printf("%d", bestRoute[i]);
-
         if (i < n - 1) {
             printf(", ");
         }
     }
+    
     printf("\n");
 }
 
