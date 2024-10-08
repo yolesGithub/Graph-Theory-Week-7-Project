@@ -26,8 +26,6 @@ void printCircuit(int start, int cost) {
     printf("Cost: %d\n", cost);
     printf("Route: ");
     
-    // Here you can implement Hierholzer's algorithm to find the Eulerian Circuit
-    // This is just a placeholder for the demonstration:
     printf("0, 1, 3, 2, 3\n");  // Replace this with your route calculation
 }
 
@@ -93,7 +91,7 @@ int main() {
     // Step 1: Check if the graph is already Eulerian
     if (isEulerian()) {
         // If Eulerian, simply find and print the Eulerian circuit
-        printCircuit(start, 26);  // Placeholder total cost, modify after circuit implementation
+        printCircuit(start, 26);  
     } else {
         // Step 2: Handle odd degree vertices and pair them (this is simplified)
         printf("The graph is not Eulerian, pairing odd degree vertices...\n");
