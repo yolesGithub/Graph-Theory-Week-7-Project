@@ -157,8 +157,8 @@ int isValidMove(int x, int y, int boardSizeX, int boardSizeY, int board[boardSiz
 }
 ```
 This function checks whether a move is valid. A move is considered valid if:
-The new position (x, y) lies within the boundaries of the board.
-The new position has not been visited yet.
+- The new position (x, y) lies within the boundaries of the board.
+- The new position has not been visited yet.
 
 ```
 // Function to solve the Knight's Tour using backtracking and print the coordinates
@@ -194,7 +194,5 @@ int solveKnightTour(int x, int y, int moveCount, int boardSizeX, int boardSizeY,
 ```
 This function implements the core backtracking algorithm:
 
-Base Case: If moveCount equals the total number of squares on the board, the tour is complete, and the function returns 1.
-Recursive Case: The knight attempts all eight possible moves. If a move is valid, it updates the board, stores the move in solution, and recursively calls the function to attempt the next move.
-If a solution is found, the function returns 1.
-If not, it backtracks by resetting the current square to -1 and tries another move.
+- Base Case: If moveCount equals the total number of squares on the board, the tour is complete, and the function returns 1.
+- Recursive Case: The knight attempts all eight possible moves. If a move is valid, it updates the board, stores the move in solution, and recursively calls the function to attempt the next move. If a solution is found, the function returns 1. If not, it backtracks by resetting the current square to -1 and tries another move.
