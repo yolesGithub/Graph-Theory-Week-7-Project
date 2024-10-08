@@ -15,7 +15,6 @@ The Travelling Salesman Problem (TSP) is a combinatorial optimization problem. G
 
 ```
 void tsp(int pos, int visitedCount, int cost, int start) {
-    
     if (visitedCount == n && graph[pos][start]) {
         cost += graph[pos][start]; // Add cost to return to start
 
