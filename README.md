@@ -67,11 +67,10 @@ void findTSP(int start) {
 This function initiates the algorithm from a given start node by marking the start as visited and calling the recursive tsp function. After the recursion finishes, it prints the minimum cost and the best route found.
 
 
-
 ## Chinese Postman Problem
 ### Problem Description
 
-The Chinese Postman Problem aims to find the shortest closed path or circuit that visits every edge of a graph at least once. This is particularly useful in logistics and postal routing scenarios.
+The Chinese Postman Problem aims to find the shortest closed path or circuit that visits every edge of a graph at least once.
 
 ### Code Explanation
 
@@ -134,7 +133,7 @@ This function impements the Floyd-Warshall algorithm to compute the shortest pat
 
 ## Knights Tour
 ### Problem Description
-The program solves the Knight's Tour by attempting to move the knight to all possible valid squares on the board. If it reaches all squares, it prints the solution path. If no solution is found, the program backtracks and tries another sequence of moves.
+Knight's Tour attempts to solve the problem by moving the knight to all possible valid squares on the board. If it reaches all squares, it prints the solution path. If no solution is found, the program backtracks and tries another sequence of moves.
 
 ### Code Explanation
 
