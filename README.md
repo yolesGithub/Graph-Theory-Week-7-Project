@@ -100,7 +100,7 @@ void printCircuit(int start, int cost) {
     printf("0, 1, 3, 2, 3\n");  // Replace this with your route calculation
 }
 ```
-Prints the Eulerian circuit and its total cost. The function currently contains a placeholder for the Eulerian circuit calculation (Hierholzer's algorithm can be used here).
+Prints the Eulerian circuit and its total cost.
 
 ```
 // Check if the degree of all vertices is even
