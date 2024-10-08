@@ -21,7 +21,6 @@ void tsp(int pos, int visitedCount, int cost, int start) {
 
         if (cost < min) { // Update minimum cost
             min = cost;
-
             for (int i = 0; i < n; i++) {
                 bestRoute[i] = currentRoute[i];
             }
@@ -56,11 +55,11 @@ void findTSP(int start) {
     printf("Route: ");
     for (int i = 0; i < n; i++) {
         printf("%d", bestRoute[i]);
-
         if (i < n - 1) {
             printf(", ");
         }
     }
+
     printf("\n");
 }
 ```
