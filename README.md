@@ -91,19 +91,6 @@ void initializeGraph() {
 This function initializes the graph by setting the diagonal to 0 (cost of self-loops) and all other edges to INF (no direct edges between nodes).
 
 ```
-// Function to print the Eulerian circuit
-void printCircuit(int start, int cost) {
-    printf("Cost: %d\n", cost);
-    printf("Route: ");
-    
-    // Here you can implement Hierholzer's algorithm to find the Eulerian Circuit
-    // This is just a placeholder for the demonstration:
-    printf("0, 1, 3, 2, 3\n");  // Replace this with your route calculation
-}
-```
-Prints the Eulerian circuit and its total cost.
-
-```
 // Check if the degree of all vertices is even
 bool isEulerian() {
     int degree[MAX_NODES] = {0};
