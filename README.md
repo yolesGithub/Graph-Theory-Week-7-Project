@@ -12,7 +12,7 @@ The Travelling Salesman Problem (TSP) is a combinatorial optimization problem. G
 
 ### Code Explanation
 
-'''
+```
 void tsp(int pos, int visitedCount, int cost, int start) {
     
     if (visitedCount == n && graph[pos][start]) {
@@ -41,10 +41,10 @@ void tsp(int pos, int visitedCount, int cost, int start) {
         }
     }
 }
-'''
+```
 This function implements the core logic of the Traveling Salesman Problem using recursion and backtracking. It explores all possible paths from the current position (pos) and keeps track of the cost (cost) of visiting nodes
 
-'''
+```
 void findTSP(int start) {
     visited[start] = 1; // Start from the initial node
     currentRoute[0] = start;
@@ -62,7 +62,7 @@ void findTSP(int start) {
     }
     printf("\n");
 }
-'''
+```
 This function initiates the algorithm from a given start node by marking the start as visited and calling the recursive tsp function. After the recursion finishes, it prints the minimum cost and the best route found.
 
 
@@ -74,7 +74,7 @@ The Chinese Postman Problem aims to find the shortest closed path or circuit tha
 
 ### Code Explanation
 
-'''
+```
 // Function to initialize the graph with no edges
 void initializeGraph() {
     for (int i = 0; i < MAX_NODES; i++) {
@@ -86,10 +86,10 @@ void initializeGraph() {
         }
     }
 }
-'''
+```
 This function initializes the graph by setting the diagonal to 0 (cost of self-loops) and all other edges to INF (no direct edges between nodes).
 
-'''
+```
 // Function to print the Eulerian circuit
 void printCircuit(int start, int cost) {
     printf("Cost: %d\n", cost);
@@ -99,10 +99,10 @@ void printCircuit(int start, int cost) {
     // This is just a placeholder for the demonstration:
     printf("0, 1, 3, 2, 3\n");  // Replace this with your route calculation
 }
-'''
+```
 Prints the Eulerian circuit and its total cost. The function currently contains a placeholder for the Eulerian circuit calculation (Hierholzer's algorithm can be used here).
 
-'''
+```
 // Check if the degree of all vertices is even
 bool isEulerian() {
     int degree[MAX_NODES] = {0};
@@ -122,10 +122,10 @@ bool isEulerian() {
     }
     return true;
 }
-'''
+```
 Checks whether the graph is Eulerian by ensuring all vertices have even degrees. The function returns true if the graph is Eulerian and false otherwise.
 
-'''
+```
 // Floyd-Warshall algorithm to find the shortest paths between all pairs of vertices
 void floydWarshall(int dist[MAX_NODES][MAX_NODES]) {
     for (int i = 0; i < n; i++)
@@ -141,5 +141,5 @@ void floydWarshall(int dist[MAX_NODES][MAX_NODES]) {
         }
     }
 }
-'''
+```
 This function impements the Floyd-Warshall algorithm to compute the shortest paths between all pairs of vertices. This is used later to determine the shortest additional edges required to transform a non-Eulerian graph into an Eulerian one.
