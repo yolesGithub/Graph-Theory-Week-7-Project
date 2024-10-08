@@ -4,6 +4,7 @@
 | ------------- | ------------- |
 | Muh. Yusuf Haidar Khairullah  | 5111942000022  |
 | Haidar Daffa Firzatullah  | 5025231071  |
+| Danendra Ramadhan    | 5025231165    |
 
 ## Traveling Salesman Problem
 ### Problem Description
