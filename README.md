@@ -143,3 +143,58 @@ void floydWarshall(int dist[MAX_NODES][MAX_NODES]) {
 }
 ```
 This function impements the Floyd-Warshall algorithm to compute the shortest paths between all pairs of vertices. This is used later to determine the shortest additional edges required to transform a non-Eulerian graph into an Eulerian one.
+
+## Knights Tour
+### Problem Description
+The program solves the Knight's Tour by attempting to move the knight to all possible valid squares on the board. If it reaches all squares, it prints the solution path. If no solution is found, the program backtracks and tries another sequence of moves.
+
+### Code Explanation
+
+```
+// Function to check if the move is valid
+int isValidMove(int x, int y, int boardSizeX, int boardSizeY, int board[boardSizeX][boardSizeY]) {
+    return (x >= 0 && x < boardSizeX && y >= 0 && y < boardSizeY && board[x][y] == -1);
+}
+```
+This function checks whether a move is valid. A move is considered valid if:
+The new position (x, y) lies within the boundaries of the board.
+The new position has not been visited yet.
+
+```
+// Function to solve the Knight's Tour using backtracking and print the coordinates
+int solveKnightTour(int x, int y, int moveCount, int boardSizeX, int boardSizeY, int board[boardSizeX][boardSizeY], int solution[boardSizeX * boardSizeY][2]) {
+    // Base case: If all squares are visited
+    if (moveCount == boardSizeX * boardSizeY) {
+        return 1;
+    }
+
+    // Try all 8 possible moves for the knight
+    for (int i = 0; i < 8; i++) {
+        int nextX = x + dx[i];
+        int nextY = y + dy[i];
+
+        // Check if the move is valid
+        if (isValidMove(nextX, nextY, boardSizeX, boardSizeY, board)) {
+            board[nextX][nextY] = moveCount;  // Make the move
+            solution[moveCount][0] = nextX;   // Store the x-coordinate in solution
+            solution[moveCount][1] = nextY;   // Store the y-coordinate in solution
+
+            // Recursively attempt to solve the next move
+            if (solveKnightTour(nextX, nextY, moveCount + 1, boardSizeX, boardSizeY, board, solution)) {
+                return 1;  // Solution found
+            }
+
+            // Backtrack: Undo the move
+            board[nextX][nextY] = -1;
+        }
+    }
+
+    return 0;  // No solution found
+}
+```
+This function implements the core backtracking algorithm:
+
+Base Case: If moveCount equals the total number of squares on the board, the tour is complete, and the function returns 1.
+Recursive Case: The knight attempts all eight possible moves. If a move is valid, it updates the board, stores the move in solution, and recursively calls the function to attempt the next move.
+If a solution is found, the function returns 1.
+If not, it backtracks by resetting the current square to -1 and tries another move.
